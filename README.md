@@ -27,26 +27,11 @@ Code works with psbody.mesh v0.4 , pytorch >= v1.0 , chumpy v0.7 and scipy v1.3 
     - short-pant_female_weights
     - short-pant_male_weights
     - skirt_female_weights
-- Set output path in `run_tailornet.py` and run it to predict garments on some random inputs. You can play with 
+- Set output path in `run_SACPNet.py` and run it to predict garments on some random inputs. You can play with 
   different inputs. You can also run inference on motion sequence data.
-- To visualize predicted garment using blender, run `python run_tailornet.py render`. (Blender 2.79 needs to be installed.)
+- To visualize predicted garment using blender, run `python run_SACPNet.py render`. (Blender 2.79 needs to be installed.)
 
-## TailorNet Per-vertex Error in mm on Test Set
-... evaluated using `evaluate` function in `utils/eval.py`.
-| garment_class | gender | TailorNet Baseline | TailorNet Mixture Model |
-|:--:|:--:|:--:|:--:|
-|  old-t-shirt  | female | 11.1 | 10.7 |
-|      t-shirt  | female | 12.6 | 12.3 |
-|      t-shirt  |   male | 11.4 | 11.2 |
-|        shirt  | female | 14.2 | 14.1 |
-|        shirt  |   male | 12.7 | 12.5 |
-|         pant  | female |  4.7 |  4.8 |
-|         pant  |   male |  8.1 |  8.1 |
-|   short-pant  | female |  6.8 |  6.6 |
-|   short-pant  |   male |  7.0 |  7.0 |
-|        skirt  | female |  7.7 |  7.8 |
-
-## Training TailorNet yourself
+## Training by yourself
 - Set global variables in `global_var.py`, especially LOG_DIR where training logs will be stored.
 - Set config variables like gender and garment class in `trainer/base_trainer.py` (or pass them via command line)
 and run `python trainer/base_trainer.py` to train TailorNet MLP baseline.
