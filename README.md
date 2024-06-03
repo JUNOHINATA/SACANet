@@ -27,14 +27,14 @@ Code works with psbody.mesh v0.4 , pytorch >= v1.0 , chumpy v0.7 and scipy v1.3 
     - short-pant_female_weights
     - short-pant_male_weights
     - skirt_female_weights
-- Set output path in `run_SACPNet.py` and run it to predict garments on some random inputs. You can play with 
+- Set output path in `run_SACANet.py` and run it to predict garments on some random inputs. You can play with 
   different inputs. You can also run inference on motion sequence data.
-- To visualize predicted garment using blender, run `python run_SACPNet.py render`. (Blender 2.79 needs to be installed.)
+- To visualize predicted garment using blender, run `python run_SACANet.py render`. (Blender 2.79 needs to be installed.)
 
 ## Training by yourself
 - Set global variables in `global_var.py`, especially LOG_DIR where training logs will be stored.
 - Set config variables like gender and garment class in `trainer/base_trainer.py` (or pass them via command line)
-and run `python trainer/base_trainer.py` to train SACPNetNet MLP baseline.
+and run `python trainer/base_trainer.py` to train SACANetNet MLP baseline.
 - Similarly, run `python trainer/lf_trainer.py` to train low frequency predictor and `trainer/ss2g_trainer.py` to
 train shape-style-to-garment(in canonical pose) model.
 - Run `python trainer/hf_trainer.py --shape_style <shape1>_<style1> <shape2>_<style2> ...` to train pivot high 
