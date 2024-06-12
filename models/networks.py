@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 
-
+# Multi-Branch SelfAttention
 # class MultiHeadSelfAttentionBlock(nn.Module):
 #     def __init__(self, input_size, hidden_size, num_heads):
 #         super(MultiHeadSelfAttentionBlock, self).__init__()
