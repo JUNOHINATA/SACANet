@@ -42,4 +42,5 @@ frequency predictors for pivots `<shape1>_<style1>`, `<shape2>_<style2>`, and so
 `DATA_DIR/<garment_class>_<gender>/pivots.txt` to know available pivots.
 
 1.No module named 'smpl_lib' :export PYTHONPATH=/.../TailorNet_dataset:$PYTHONPATH
+
 2.No blender :export PATH="/home/cyx/cyx/blender-2.79-linux-glibc219-x86_64:$PATH"(your own path)
